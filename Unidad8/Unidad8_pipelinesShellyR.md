@@ -17,12 +17,11 @@ Desventajas:
 
 Recuerda el ejercicio 4 de la Unidad 3 para un ejemplo de cómo puede ser esto útil.
 
-
-### Correr R desde la Terminal
+## 8.2 Correr R desde la Terminal
 
 R es un programa que funciona con la línea de comando y por lo tanto puede correrse desde la terminal de varias formas:
 
-#### Acceder a la consola de R desde la Terminal: 
+### Acceder a la consola de R desde la Terminal: 
 
 ```{bash}
 $ R
@@ -47,15 +46,15 @@ Type 'q()' to quit R.
 > 1+1
 [1] 2
 ```
-#### Correr R en batch mode
+### Correr R en batch mode
 
 Es decir correr scripts de R desde la terminal sin abrir R. Esto es útil porque correr un script de R puede volverse parte de un script de bash.
 
 Existen tres formas de hacerlo:
 
-##### `Rscript` 
+#### `Rscript` 
 
-Por ejemplo el script `/Unidad8/Prac_Uni8/holascript_simple.R` contiene:
+Por ejemplo el script `/Practicas/Uni8/holascript_simple.R` contiene:
 
 ```{R}
 x<-10
@@ -70,9 +69,9 @@ $ Rscript holascript_simple.R
 ¡Hola mundo! 10 + 6 es igual a 16
 ```
 
-##### `#!` a `Rscript`
+#### `#!` a `Rscript`
 
-El contenido de un script debe incluir en la primera línea `#!/usr/bin/Rscript`. Por ejemplo el script `/Unidad8/Prac_Uni8/holascript.R` contiene:
+El contenido de un script debe incluir en la primera línea `#!/usr/bin/Rscript`. Por ejemplo el script `/Practicas/Uni8/holascript.R` contiene:
 
 ```{R}
 #! /usr/bin/Rscript
@@ -91,7 +90,7 @@ $ ./holascript.R
 
 Nota: si lo anterior no funciona tal vez debas cambiar la ruta a Rscript, puedes averiguar esto con `which Rscript` en la Terminal. Ojo, esto NO es lo mismo que `which R`.
 
-##### `R CMD BATCH`:
+#### `R CMD BATCH`:
 
 Una alternativa a RScript es `R CMD BATCH`. La diferencia es que el resultado de correr el script se escribe a un archivo `.Rout` (incluso si el script involucra imprimir resultados a pantalla con `cat` o `print`) que contiene el código, el resultado y datos de cuánto tardó el procesamiento. 
 
@@ -130,9 +129,9 @@ Type 'q()' to quit R.
 Notas recomendadas: [Running R in batch mode on Linux](http://www.cureffi.org/2014/01/15/running-r-batch-mode-linux/)
 
 
-### Correr cualquier programa desde R
+## Correr cualquier programa desde R
 
-De forma similar, cualquier comando de bash (o programa que corra en bash) pude correrse desde R con la función `system()`. Por ejemplo el script `/Unidad8/Prac_Uni8/bin/system_ejemplo.R` que contiene:
+De forma similar, cualquier comando de bash (o programa que corra en bash) pude correrse desde R con la función `system()`. Por ejemplo el script `Unidad8/Prac_Uni8/bin/system_ejemplo.R` que contiene:
 
 
 ```
